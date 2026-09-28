@@ -1,0 +1,25 @@
+# Local agent configuration
+/AGENTS.md
+.agents/
+.codex/
+
+# OpenFOAM output (keep the initial-condition template)
+/runs/
+motorBike/[0-9]*/
+!motorBike/0.orig/
+motorBike/processor*/
+motorBike/postProcessing/
+motorBike/constant/polyMesh/
+motorBike/constant/extendedFeatureEdgeMesh/
+motorBike/constant/triSurface/motorBike.obj.gz
+motorBike/log
+motorBike/log.*
+motorBike/*.foam
+motorBike/*.OpenFOAM
+
+# Editor and operating-system files
+*~
+*.swp
+*.swo
+.DS_Store
+Thumbs.db

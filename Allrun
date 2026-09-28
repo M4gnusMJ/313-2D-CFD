@@ -1,0 +1,23 @@
+#!/bin/sh
+cd "${0%/*}" || exit                                # Run from this directory
+#------------------------------------------------------------------------------
+
+# Run all cases unless case names are supplied
+if [ "$#" -eq 0 ]
+then
+    set -- prism moon 313
+fi
+
+for caseName in "$@"
+do
+    runDir="runs/${caseName}_run"
+
+    # Copy the common inputs and selected geometry
+    mkdir -p "$runDir/constant/triSurface" || exit
+    cp -r base_setup/. "$runDir/" || exit
+    cp "geometries/$caseName/body.stl" "$runDir/constant/triSurface/body.stl" || exit
+
+    "$runDir/Allrun" || exit
+done
+
+#------------------------------------------------------------------------------
