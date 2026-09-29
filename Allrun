@@ -5,7 +5,7 @@ cd "${0%/*}" || exit                                # Run from this directory
 # Run all cases unless case names are supplied
 if [ "$#" -eq 0 ]
 then
-    set -- prism moon 313
+    set -- prism half_moon 313
 fi
 
 for caseName in "$@"
