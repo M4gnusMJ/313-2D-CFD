@@ -18,7 +18,7 @@ FoamFile
 
 dimensions      [0 2 -2 0 0 0 0];
 
-internalField   uniform $pressure;
+internalField   uniform 101e3;
 
 boundaryField
 {
@@ -26,13 +26,12 @@ boundaryField
 
     inlet
     {
-        type            zeroGradient;
+        type            zeroGradient; // Will add reference cell in fvSolution, top left
     }
 
     outlet
     {
-        type            fixedValue;
-        value           $internalField;
+        type            zeroGradient;
     }
 
     lowerWall

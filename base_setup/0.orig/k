@@ -29,21 +29,18 @@ boundaryField
 
     outlet
     {
-        type            inletOutlet;
-        inletValue      $internalField;
-        value           $internalField;
+        type            zeroGradient;
     }
 
     lowerWall
     {
-        type            kqRWallFunction;
-        value           $internalField;
+        type            zeroGradient;
     }
 
     motorBikeGroup
     {
-        type            kqRWallFunction;
-        value           $internalField;
+        type            fixedValue; //Resolving BL
+        value           uniform 1e-9;
     }
 
     #include "include/frontBackUpperPatches"

@@ -59,13 +59,19 @@ solvers
 
 SIMPLE
 {
-    nNonOrthogonalCorrectors 0;
+    nNonOrthogonalCorrectors 2;
     consistent yes;
+
+    pRefCell        0;              //Bottom left 
+    pRefValue       101e3;              // air density approx 1
 }
 
 potentialFlow
 {
     nNonOrthogonalCorrectors 10;
+
+    PhiRefCell      0;
+    PhiRefValue     0; //Velocity potential to solve the euler eqs for initial starting field for velocity
 }
 
 relaxationFactors

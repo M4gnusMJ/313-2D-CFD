@@ -35,13 +35,12 @@ boundaryField
 
     lowerWall
     {
-        type            omegaWallFunction;
-        value           $internalField;
+        type            zeroGradient;
     }
 
     motorBikeGroup
     {
-        type            omegaWallFunction;
+        type            omegaWallFunction; // Note, scalable wall function!
         value           $internalField;
     }
 

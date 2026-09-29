@@ -8,12 +8,12 @@
 
 upperWall
 {
-    type slip;
+    type symmetryPlane;
 }
 
 frontAndBack
 {
-    type slip;
+    type empty;
 }
 
 // ************************************************************************* //

@@ -6,9 +6,13 @@
 |    \\/     M anipulation  |                                                 |
 \*---------------------------------------------------------------------------*/
 
-flowVelocity         (20 0 0);
-pressure             0;
-turbulentKE          0.24;
-turbulentOmega       1.78;
+I                   0.05;
+viscosity_ratio     10;
+
+
+flowVelocity         (22.2222222222 0 0); //80 km/h
+// pressure             0; Use a single reference cell 
+turbulentKE          #calc "3.0/2.0 * std::pow(22.22222* $I, 2)";    // Corresponding to 5% turbulence intensity
+turbulentOmega       #calc "$turbulentKE / 1.5e-5 / $viscosity_ratio ";      // Ditto
 
 // ************************************************************************* //

@@ -15,6 +15,14 @@ Allrun                 Copies inputs and runs selected cases
 All cases receive the same `snappyHexMeshDict` and other base settings.
 Only the geometry is selected separately. Generated cases are ignored by Git.
 
+## Wall treatment
+
+The body currently uses `omegaWallFunction` for omega and `nutkWallFunction`
+for turbulent viscosity, with a near-zero fixed value for k. The intended
+approach is to resolve the near-wall boundary layer with a target of
+`y+` approximately 1. Layer spacing and achieved `y+` still need verification.
+This setup is not explicitly configured as a scalable wall-function treatment.
+
 ## Geometry preparation: prism and half-moon
 
 Our coordinate convention is X along the flow, Y vertical, and Z spanwise.
@@ -64,6 +72,10 @@ Put the geometry at `geometries/prism/body.stl`, then run from the project root:
 This copies the base and geometry into `runs/prism_run/`, then executes that
 case's `Allrun`. Replace `prism` with another geometry folder name as needed.
 
+The per-case `Allrun` is based on the OpenFOAM `motorBike` (motorcycle)
+tutorial. It retains `potentialFoam -writephi` to initialise the velocity
+field and write the face flux before `simpleFoam` solves the steady flow.
+
 To run an already prepared case directly:
 
 ```sh
@@ -81,3 +93,6 @@ Each selected geometry must exist at `geometries/<name>/body.stl`.
 
 Edit `base_setup/` for changes shared by future preparations. Directly running
 a generated case uses its existing copied settings.
+
+To clean all generated cases, run `./Allclean` from the project root. This
+deletes `runs/`, including all results, and preserves `base_setup/` and `geometries/`.
