@@ -17,10 +17,11 @@ Only the geometry is selected separately. Generated cases are ignored by Git.
 
 ## Wall treatment
 
-The body currently uses `omegaWallFunction` for omega and `nutkWallFunction`
-for turbulent viscosity, with a near-zero fixed value for k. The intended
-approach is to resolve the near-wall boundary layer with a target of
-`y+` approximately 1. Layer spacing and achieved `y+` still need verification.
+The body uses `kqRWallFunction` for k, `omegaWallFunction` for omega, and
+`nutkWallFunction` for turbulent viscosity. The intended wall-function
+approach targets `y+` around 50–100 in attached-flow regions, within the
+usual 30–300 range. Low values near stagnation and separation are expected.
+Layer spacing and achieved `y+` still need verification.
 This setup is not explicitly configured as a scalable wall-function treatment.
 
 ## Geometry preparation: prism and half-moon
@@ -75,6 +76,11 @@ case's `Allrun`. Replace `prism` with another geometry folder name as needed.
 The per-case `Allrun` is based on the OpenFOAM `motorBike` (motorcycle)
 tutorial. It retains `potentialFoam -writephi` to initialise the velocity
 field and write the face flux before `simpleFoam` solves the steady flow.
+
+After snappy meshing, `extrudeMesh` rebuilds the mesh from the Z = 0 face
+with one cell across Z = 0 to 0.04 m. The `plane` extrusion model sets
+`front` and `back` to `empty` for the 2D simulation. Forces scale with this
+thickness; use a reference area based on the same thickness for force coefficients.
 
 To run an already prepared case directly:
 

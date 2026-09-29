@@ -22,7 +22,7 @@ boundaryField
 {
     #includeEtc "caseDicts/setConstraintTypes"
 
-    frontAndBack
+    "(front|back)"
     {
         type            empty;
     }
@@ -52,7 +52,7 @@ boundaryField
 
     motorBikeGroup
     {
-        type            nutLowReWallFunction;
+        type            nutkWallFunction;
         value           uniform 0;
     }
 }

@@ -39,8 +39,8 @@ boundaryField
 
     motorBikeGroup
     {
-        type            fixedValue; //Resolving BL
-        value           uniform 1e-9;
+        type            kqRWallFunction;
+        value           $internalField;
     }
 
     #include "include/frontBackUpperPatches"

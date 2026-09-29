@@ -22,7 +22,12 @@ then
     echo " - distributedTriSurfaceMesh will do on-the-fly redistribution"
 fi
 
-runParallel $decompDict snappyHexMesh -overwrite
+runParallel $decompDict snappyHexMesh -overwrite || exit
+
+# Rebuild the mesh as one cell through Z, with empty front/back patches
+runApplication -s snappy reconstructParMesh -constant || exit
+runApplication extrudeMesh || exit
+runApplication -s extruded $decompDict decomposePar -force || exit
 
 runParallel $decompDict renumberMesh -overwrite
 
@@ -36,7 +41,7 @@ restore0Dir -processor
 
 runParallel $decompDict patchSummary
 
-runParallel $decompDict potentialFoam -writephi
+runParallel $decompDict potentialFoam -pName pPotential -writephi || exit
 
 runParallel $decompDict checkMesh -writeFields '(nonOrthoAngle)' -constant
 
@@ -46,4 +51,6 @@ runApplication reconstructParMesh -constant
 
 runApplication reconstructPar -latestTime
 
+# Post processing
+runApplication -s yPlus simpleFoam -postProcess -func yPlus -latestTime
 #------------------------------------------------------------------------------

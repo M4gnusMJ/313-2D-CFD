@@ -40,7 +40,7 @@ boundaryField
 
     motorBikeGroup
     {
-        type            omegaWallFunction; // Note, scalable wall function!
+        type            omegaWallFunction;
         value           $internalField;
     }
 
