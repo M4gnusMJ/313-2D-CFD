@@ -1,0 +1,151 @@
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2412                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : _b8cf4d35-20260127 OPENFOAM=2412 patch=260127 version=2412
+Arch   : "LSB;label=32;scalar=64"
+Exec   : reconstructParMesh -constant
+Date   : Sep 29 2026
+Time   : 16:19:13
+Host   : magnus-IdeaPad-5-Pro-16ARH7
+PID    : 923917
+I/O    : uncollated
+Case   : /home/magnus/OpenFOAM/magnus-v2412/run/assignment_5/runs/313_pimple_run
+nProcs : 1
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Using #calc - line 29 in file "system/controlDict/functions/forceCoeffs1"
+Using #codeStream with "/home/magnus/OpenFOAM/magnus-v2412/run/assignment_5/runs/313_pimple_run/dynamicCode/platforms/linux64GccDPInt32Opt/lib/libcodeStream_3f32376cd607aaf007d6f13706d755daf809d625.so"
+Using #calc - line 29 in file "system/controlDict/functions/forceCoeffs1"
+Merge individual processor meshes back into one master mesh.
+Use if the original master mesh has been deleted or the processor meshes
+have been modified (topology change).
+This tool will write the resulting mesh to a new time step and construct
+xxxxProcAddressing files in the processor meshes so reconstructPar can be
+used to regenerate the fields on the master mesh.
+
+Not well tested & use at your own risk!
+
+Merge assuming correct, fully matched procBoundaries.
+
+Found 6 processor directories
+    Reading database "313_pimple_run/processor0"
+Using #calc - line 29 in file "system/controlDict/functions/forceCoeffs1"
+Using #codeStream with "/home/magnus/OpenFOAM/magnus-v2412/run/assignment_5/runs/313_pimple_run/dynamicCode/platforms/linux64GccDPInt32Opt/lib/libcodeStream_3f32376cd607aaf007d6f13706d755daf809d625.so"
+Using #calc - line 29 in file "system/controlDict/functions/forceCoeffs1"
+    Reading database "313_pimple_run/processor1"
+Using #calc - line 29 in file "system/controlDict/functions/forceCoeffs1"
+Using #codeStream with "/home/magnus/OpenFOAM/magnus-v2412/run/assignment_5/runs/313_pimple_run/dynamicCode/platforms/linux64GccDPInt32Opt/lib/libcodeStream_3f32376cd607aaf007d6f13706d755daf809d625.so"
+Using #calc - line 29 in file "system/controlDict/functions/forceCoeffs1"
+    Reading database "313_pimple_run/processor2"
+Using #calc - line 29 in file "system/controlDict/functions/forceCoeffs1"
+Using #codeStream with "/home/magnus/OpenFOAM/magnus-v2412/run/assignment_5/runs/313_pimple_run/dynamicCode/platforms/linux64GccDPInt32Opt/lib/libcodeStream_3f32376cd607aaf007d6f13706d755daf809d625.so"
+Using #calc - line 29 in file "system/controlDict/functions/forceCoeffs1"
+    Reading database "313_pimple_run/processor3"
+Using #calc - line 29 in file "system/controlDict/functions/forceCoeffs1"
+Using #codeStream with "/home/magnus/OpenFOAM/magnus-v2412/run/assignment_5/runs/313_pimple_run/dynamicCode/platforms/linux64GccDPInt32Opt/lib/libcodeStream_3f32376cd607aaf007d6f13706d755daf809d625.so"
+Using #calc - line 29 in file "system/controlDict/functions/forceCoeffs1"
+    Reading database "313_pimple_run/processor4"
+Using #calc - line 29 in file "system/controlDict/functions/forceCoeffs1"
+Using #codeStream with "/home/magnus/OpenFOAM/magnus-v2412/run/assignment_5/runs/313_pimple_run/dynamicCode/platforms/linux64GccDPInt32Opt/lib/libcodeStream_3f32376cd607aaf007d6f13706d755daf809d625.so"
+Using #calc - line 29 in file "system/controlDict/functions/forceCoeffs1"
+    Reading database "313_pimple_run/processor5"
+Using #calc - line 29 in file "system/controlDict/functions/forceCoeffs1"
+Using #codeStream with "/home/magnus/OpenFOAM/magnus-v2412/run/assignment_5/runs/313_pimple_run/dynamicCode/platforms/linux64GccDPInt32Opt/lib/libcodeStream_3f32376cd607aaf007d6f13706d755daf809d625.so"
+Using #calc - line 29 in file "system/controlDict/functions/forceCoeffs1"
+
+Time = constant
+
+
+Writing merged mesh to "constant/polyMesh"
+
+Reconstructing addressing from processor meshes to the newly reconstructed mesh
+
+Processor 0
+Read processor mesh: "313_pimple_run/processor0"
+Writing addressing : "313_pimple_run/processor0/constant/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 1
+Read processor mesh: "313_pimple_run/processor1"
+Writing addressing : "313_pimple_run/processor1/constant/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 2
+Read processor mesh: "313_pimple_run/processor2"
+Writing addressing : "313_pimple_run/processor2/constant/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 3
+Read processor mesh: "313_pimple_run/processor3"
+Writing addressing : "313_pimple_run/processor3/constant/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 4
+Read processor mesh: "313_pimple_run/processor4"
+Writing addressing : "313_pimple_run/processor4/constant/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 5
+Read processor mesh: "313_pimple_run/processor5"
+Writing addressing : "313_pimple_run/processor5/constant/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Time = 0.1
+No meshes
+
+Time = 0.2
+No meshes
+
+Time = 0.3
+No meshes
+
+Time = 0.4
+No meshes
+
+Time = 0.5
+No meshes
+
+Time = 0.6
+No meshes
+
+Time = 0.7
+No meshes
+
+Time = 0.8
+No meshes
+
+Time = 0.9
+No meshes
+
+Time = 1
+No meshes
+
+End
+

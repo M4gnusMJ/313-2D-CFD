@@ -1,0 +1,106 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v2412                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      blockMeshDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+scale   1;          //All stl's are given in meters
+
+upstream_dist       #calc "5*1.09585";                 // Car lengths (1.09585 is height && width of 313)
+downstream_dist     #calc "(10+1)*1.09585";            // +1 to account for length of car itself from origin
+roof_height         #calc "(5+1)*1.09585";             // Roof height above car
+
+vertices                                            // Background mesh
+(
+    (-$upstream_dist     -1             0)          // -5 is 5 car-lengths (approx) upstream
+    ($downstream_dist   -1              0)          //
+    ($downstream_dist   $roof_height    0)
+    (-$upstream_dist     $roof_height   0)
+    (-$upstream_dist     -1             0.04)       // Cuts through all bodies on both sides
+    ($downstream_dist   -1              0.04)
+    ($downstream_dist   $roof_height    0.04)
+    (-$upstream_dist     $roof_height   0.04)
+);
+
+// As per the guide, want an aspect ratio of approximately 1
+// We therefore parametrise this as another parameter we might want to change
+// Max cell size 
+max_h   0.5;
+Nx      #calc "static_cast<int>(std::ceil(($upstream_dist + $downstream_dist)/$max_h))";
+Ny      #calc "static_cast<int>(std::ceil(($roof_height + 1)/$max_h))";
+
+// We have not cared about aspect ratio on z direction
+
+blocks
+(
+    hex (0 1 2 3 4 5 6 7) ($Nx $Ny 1) simpleGrading (1 1 1)
+);
+
+edges
+(
+);
+
+boundary
+(
+    front
+    {
+        type patch;     // Z = 0; empty after extrusion
+        faces
+        (
+            (0 3 2 1)
+        );
+    }
+    back
+    {
+        type patch;     // Z = 0.04; empty after extrusion
+        faces
+        (
+            (4 5 6 7)
+        );
+    }
+    inlet
+    {
+        type patch;
+        faces
+        (
+            (0 4 7 3)
+        );
+    }
+    outlet
+    {
+        type patch;
+        faces
+        (
+            (2 6 5 1)
+        );
+    }
+    lowerWall
+    {
+        type patch;
+        faces
+        (
+            (0 1 5 4)
+        );
+    }
+    upperWall
+    {
+        type symmetryPlane;
+        faces
+        (
+            (2 3 7 6)
+        );
+    }
+);
+
+
+// ************************************************************************* //

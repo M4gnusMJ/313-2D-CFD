@@ -1,0 +1,22 @@
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      extrudeMeshDict;
+}
+
+// Rebuild a one-cell-thick mesh from the Z = 0 plane
+constructFrom patch;
+sourceCase    "<case>";
+sourcePatches (front);
+exposedPatchName back;
+
+// The plane model also sets front and back to empty
+extrudeModel  plane;
+nLayers       1;
+thickness     0.04;
+
+// Front points outwards in -Z; flip to extrude into +Z
+flipNormals true;
+mergeFaces  false;

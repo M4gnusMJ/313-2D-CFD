@@ -1,0 +1,56 @@
+#!/bin/sh
+cd "${0%/*}" || exit                                # Run from this directory
+. ${WM_PROJECT_DIR:?}/bin/tools/RunFunctions        # Tutorial run functions
+#------------------------------------------------------------------------------
+
+# Alternative decomposeParDict name:
+decompDict="-decomposeParDict system/decomposeParDict.6"
+## Standard decomposeParDict name:
+# unset decompDict
+
+runApplication surfaceFeatureExtract
+
+runApplication blockMesh
+
+runApplication $decompDict decomposePar
+
+# Using distributedTriSurfaceMesh?
+if foamDictionary -entry geometry -value system/snappyHexMeshDict | \
+   grep -q distributedTriSurfaceMesh
+then
+    echo "surfaceRedistributePar does not need to be run anymore"
+    echo " - distributedTriSurfaceMesh will do on-the-fly redistribution"
+fi
+
+runParallel $decompDict snappyHexMesh -overwrite || exit
+
+# Rebuild the mesh as one cell through Z, with empty front/back patches
+runApplication -s snappy reconstructParMesh -constant || exit
+runApplication extrudeMesh || exit
+runApplication -s extruded $decompDict decomposePar -force || exit
+
+runParallel $decompDict renumberMesh -overwrite
+
+runParallel $decompDict topoSet
+
+#- For non-parallel running: - set the initial fields
+# restore0Dir
+
+#- For parallel running: set the initial fields
+restore0Dir -processor
+
+runParallel $decompDict patchSummary
+
+runParallel $decompDict potentialFoam -pName pPotential -writephi || exit
+
+runParallel $decompDict checkMesh -writeFields '(nonOrthoAngle)' -constant
+
+runParallel $decompDict $(getApplication)
+
+runApplication reconstructParMesh -constant
+
+runApplication reconstructPar -latestTime
+
+# Post processing
+runApplication -s yPlus simpleFoam -postProcess -func yPlus -latestTime
+#------------------------------------------------------------------------------

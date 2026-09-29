@@ -1,0 +1,84 @@
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2412                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : _b8cf4d35-20260127 OPENFOAM=2412 patch=260127 version=2412
+Arch   : "LSB;label=32;scalar=64"
+Exec   : reconstructPar -latestTime
+Date   : Sep 29 2026
+Time   : 15:44:00
+Host   : magnus-IdeaPad-5-Pro-16ARH7
+PID    : 914708
+I/O    : uncollated
+Case   : /home/magnus/OpenFOAM/magnus-v2412/run/assignment_5/runs/prism_pimple_run
+nProcs : 1
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Using #calc - line 29 in file "system/controlDict/functions/forceCoeffs1"
+Using #codeStream with "/home/magnus/OpenFOAM/magnus-v2412/run/assignment_5/runs/prism_pimple_run/dynamicCode/platforms/linux64GccDPInt32Opt/lib/libcodeStream_3f32376cd607aaf007d6f13706d755daf809d625.so"
+Using #calc - line 29 in file "system/controlDict/functions/forceCoeffs1"
+Using #calc - line 29 in file "system/controlDict/functions/forceCoeffs1"
+Using #codeStream with "/home/magnus/OpenFOAM/magnus-v2412/run/assignment_5/runs/prism_pimple_run/dynamicCode/platforms/linux64GccDPInt32Opt/lib/libcodeStream_3f32376cd607aaf007d6f13706d755daf809d625.so"
+Using #calc - line 29 in file "system/controlDict/functions/forceCoeffs1"
+Using #calc - line 29 in file "system/controlDict/functions/forceCoeffs1"
+Using #codeStream with "/home/magnus/OpenFOAM/magnus-v2412/run/assignment_5/runs/prism_pimple_run/dynamicCode/platforms/linux64GccDPInt32Opt/lib/libcodeStream_3f32376cd607aaf007d6f13706d755daf809d625.so"
+Using #calc - line 29 in file "system/controlDict/functions/forceCoeffs1"
+Using #calc - line 29 in file "system/controlDict/functions/forceCoeffs1"
+Using #codeStream with "/home/magnus/OpenFOAM/magnus-v2412/run/assignment_5/runs/prism_pimple_run/dynamicCode/platforms/linux64GccDPInt32Opt/lib/libcodeStream_3f32376cd607aaf007d6f13706d755daf809d625.so"
+Using #calc - line 29 in file "system/controlDict/functions/forceCoeffs1"
+Using #calc - line 29 in file "system/controlDict/functions/forceCoeffs1"
+Using #codeStream with "/home/magnus/OpenFOAM/magnus-v2412/run/assignment_5/runs/prism_pimple_run/dynamicCode/platforms/linux64GccDPInt32Opt/lib/libcodeStream_3f32376cd607aaf007d6f13706d755daf809d625.so"
+Using #calc - line 29 in file "system/controlDict/functions/forceCoeffs1"
+Using #calc - line 29 in file "system/controlDict/functions/forceCoeffs1"
+Using #codeStream with "/home/magnus/OpenFOAM/magnus-v2412/run/assignment_5/runs/prism_pimple_run/dynamicCode/platforms/linux64GccDPInt32Opt/lib/libcodeStream_3f32376cd607aaf007d6f13706d755daf809d625.so"
+Using #calc - line 29 in file "system/controlDict/functions/forceCoeffs1"
+Using #calc - line 29 in file "system/controlDict/functions/forceCoeffs1"
+Using #codeStream with "/home/magnus/OpenFOAM/magnus-v2412/run/assignment_5/runs/prism_pimple_run/dynamicCode/platforms/linux64GccDPInt32Opt/lib/libcodeStream_3f32376cd607aaf007d6f13706d755daf809d625.so"
+Using #calc - line 29 in file "system/controlDict/functions/forceCoeffs1"
+
+
+Reconstructing fields
+region=region0
+
+Time = 1
+
+Reconstructing FV fields
+
+    Reconstructing volScalarFields
+
+        k
+        k_0
+        nut
+        omega
+        omega_0
+        p
+
+    Reconstructing volVectorFields
+
+        U
+        U_0
+
+    Reconstructing surfaceScalarFields
+
+        phi
+        phi_0
+
+Reconstructing point fields
+
+No point fields
+
+No lagrangian fields
+
+No FA fields
+
+
+End
+

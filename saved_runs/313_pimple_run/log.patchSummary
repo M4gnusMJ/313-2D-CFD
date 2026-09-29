@@ -1,0 +1,127 @@
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2412                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : _b8cf4d35-20260127 OPENFOAM=2412 patch=260127 version=2412
+Arch   : "LSB;label=32;scalar=64"
+Exec   : patchSummary -parallel -decomposeParDict system/decomposeParDict.6
+Date   : Sep 29 2026
+Time   : 15:56:00
+Host   : magnus-IdeaPad-5-Pro-16ARH7
+PID    : 920515
+I/O    : uncollated
+Case   : /home/magnus/OpenFOAM/magnus-v2412/run/assignment_5/runs/313_pimple_run
+nProcs : 6
+Hosts  :
+(
+    (magnus-IdeaPad-5-Pro-16ARH7 6)
+)
+Pstream initialized with:
+    floatTransfer      : false
+    maxCommsSize       : 0
+    nProcsSimpleSum    : 0
+    nonBlockingExchange: 0 (tuning: 0)
+    exchange algorithm : 0
+    commsType          : nonBlocking
+    polling iterations : 0
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Using #calc - line 29 in file "system/controlDict/functions/forceCoeffs1"
+Using #codeStream with "/home/magnus/OpenFOAM/magnus-v2412/run/assignment_5/runs/313_pimple_run/dynamicCode/platforms/linux64GccDPInt32Opt/lib/libcodeStream_3f32376cd607aaf007d6f13706d755daf809d625.so"
+Using #calc - line 29 in file "system/controlDict/functions/forceCoeffs1"
+Create mesh for time = 0
+
+Time = 0
+
+Reading fields:
+    volScalarField (kUsing #calc - line 15 in file "processor0/0/k"
+Using #codeStream with "/home/magnus/OpenFOAM/magnus-v2412/run/assignment_5/runs/313_pimple_run/dynamicCode/platforms/linux64GccDPInt32Opt/lib/libcodeStream_6bba26c0527d8b69860ca79812ba1bccc686bdd4.so"
+Could not load "/home/magnus/OpenFOAM/magnus-v2412/run/assignment_5/runs/313_pimple_run/dynamicCode/platforms/linux64GccDPInt32Opt/lib/libcodeStream_6bba26c0527d8b69860ca79812ba1bccc686bdd4.so"
+/home/magnus/OpenFOAM/magnus-v2412/run/assignment_5/runs/313_pimple_run/dynamicCode/platforms/linux64GccDPInt32Opt/lib/libcodeStream_6bba26c0527d8b69860ca79812ba1bccc686bdd4.so: cannot open shared object file: No such file or directory
+Creating new library in "dynamicCode/_6bba26c0527d8b69860ca79812ba1bccc686bdd4/platforms/linux64GccDPInt32Opt/lib/libcodeStream_6bba26c0527d8b69860ca79812ba1bccc686bdd4.so"
+Invoking wmake libso /home/magnus/OpenFOAM/magnus-v2412/run/assignment_5/runs/313_pimple_run/dynamicCode/_6bba26c0527d8b69860ca79812ba1bccc686bdd4
+wmake libso /home/magnus/OpenFOAM/magnus-v2412/run/assignment_5/runs/313_pimple_run/dynamicCode/_6bba26c0527d8b69860ca79812ba1bccc686bdd4
+    ln: ./lnInclude
+    dep: codeStreamTemplate.C
+    Ctoo: codeStreamTemplate.C
+    link: /home/magnus/OpenFOAM/magnus-v2412/run/assignment_5/runs/313_pimple_run/dynamicCode/_6bba26c0527d8b69860ca79812ba1bccc686bdd4/../platforms/linux64GccDPInt32Opt/lib/libcodeStream_6bba26c0527d8b69860ca79812ba1bccc686bdd4.so
+Using #calc - line 16 in file "processor0/0/k"
+Using #codeStream with "/home/magnus/OpenFOAM/magnus-v2412/run/assignment_5/runs/313_pimple_run/dynamicCode/platforms/linux64GccDPInt32Opt/lib/libcodeStream_89e88f0b3da435b3d325232cd8269a5affdd2103.so"
+Could not load "/home/magnus/OpenFOAM/magnus-v2412/run/assignment_5/runs/313_pimple_run/dynamicCode/platforms/linux64GccDPInt32Opt/lib/libcodeStream_89e88f0b3da435b3d325232cd8269a5affdd2103.so"
+/home/magnus/OpenFOAM/magnus-v2412/run/assignment_5/runs/313_pimple_run/dynamicCode/platforms/linux64GccDPInt32Opt/lib/libcodeStream_89e88f0b3da435b3d325232cd8269a5affdd2103.so: cannot open shared object file: No such file or directory
+Creating new library in "dynamicCode/_89e88f0b3da435b3d325232cd8269a5affdd2103/platforms/linux64GccDPInt32Opt/lib/libcodeStream_89e88f0b3da435b3d325232cd8269a5affdd2103.so"
+Invoking wmake libso /home/magnus/OpenFOAM/magnus-v2412/run/assignment_5/runs/313_pimple_run/dynamicCode/_89e88f0b3da435b3d325232cd8269a5affdd2103
+wmake libso /home/magnus/OpenFOAM/magnus-v2412/run/assignment_5/runs/313_pimple_run/dynamicCode/_89e88f0b3da435b3d325232cd8269a5affdd2103
+    ln: ./lnInclude
+    dep: codeStreamTemplate.C
+    Ctoo: codeStreamTemplate.C
+    link: /home/magnus/OpenFOAM/magnus-v2412/run/assignment_5/runs/313_pimple_run/dynamicCode/_89e88f0b3da435b3d325232cd8269a5affdd2103/../platforms/linux64GccDPInt32Opt/lib/libcodeStream_89e88f0b3da435b3d325232cd8269a5affdd2103.so
+ nut omegaUsing #calc - line 15 in file "processor0/0/omega"
+Using #calc - line 16 in file "processor0/0/omega"
+ pUsing #calc - line 15 in file "processor0/0/p"
+Using #calc - line 16 in file "processor0/0/p"
+)
+    volVectorField (UUsing #calc - line 15 in file "processor0/0/U"
+Using #calc - line 16 in file "processor0/0/U"
+)
+
+group	: empty
+    scalar		k		empty
+    scalar		nut		empty
+    scalar		omega		empty
+    scalar		p		empty
+    vector		U		empty
+
+patch	: inlet
+    scalar		k		fixedValue
+    scalar		nut		calculated
+    scalar		omega		fixedValue
+    scalar		p		zeroGradient
+    vector		U		fixedValue
+
+patch	: outlet
+    scalar		k		zeroGradient
+    scalar		nut		calculated
+    scalar		omega		inletOutlet
+    scalar		p		zeroGradient
+    vector		U		zeroGradient
+
+patch	: lowerWall
+    scalar		k		zeroGradient
+    scalar		nut		calculated
+    scalar		omega		zeroGradient
+    scalar		p		zeroGradient
+    vector		U		slip
+
+symmetryPlane	: upperWall
+    scalar		k		symmetryPlane
+    scalar		nut		symmetryPlane
+    scalar		omega		symmetryPlane
+    scalar		p		symmetryPlane
+    vector		U		symmetryPlane
+
+wall	: body
+    scalar		k		generic
+    scalar		nut		generic
+    scalar		omega		generic
+    scalar		p		zeroGradient
+    vector		U		noSlip
+
+group	: processor
+    scalar		k		processor
+    scalar		nut		processor
+    scalar		omega		processor
+    scalar		p		processor
+    vector		U		processor
+
+End
+
+Finalising parallel run

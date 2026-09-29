@@ -1,0 +1,161 @@
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2412                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : _b8cf4d35-20260127 OPENFOAM=2412 patch=260127 version=2412
+Arch   : "LSB;label=32;scalar=64"
+Exec   : decomposePar -decomposeParDict system/decomposeParDict.6 -force
+Date   : Sep 29 2026
+Time   : 15:55:58
+Host   : magnus-IdeaPad-5-Pro-16ARH7
+PID    : 920449
+I/O    : uncollated
+Case   : /home/magnus/OpenFOAM/magnus-v2412/run/assignment_5/runs/313_pimple_run
+nProcs : 1
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Using #calc - line 29 in file "system/controlDict/functions/forceCoeffs1"
+Using #codeStream with "/home/magnus/OpenFOAM/magnus-v2412/run/assignment_5/runs/313_pimple_run/dynamicCode/platforms/linux64GccDPInt32Opt/lib/libcodeStream_3f32376cd607aaf007d6f13706d755daf809d625.so"
+Using #calc - line 29 in file "system/controlDict/functions/forceCoeffs1"
+
+
+Decomposing mesh
+
+Removing 6 existing processor directories
+Create mesh
+
+Calculating distribution of cells
+Decomposition method hierarchical [6] (region region0)
+
+Finished decomposition in 0.01 s
+
+Calculating original mesh data
+
+Distributing cells to processors
+
+Distributing faces to processors
+
+Distributing points to processors
+
+Constructing processor meshes
+Using #calc - line 29 in file "system/controlDict/functions/forceCoeffs1"
+Using #codeStream with "/home/magnus/OpenFOAM/magnus-v2412/run/assignment_5/runs/313_pimple_run/dynamicCode/platforms/linux64GccDPInt32Opt/lib/libcodeStream_3f32376cd607aaf007d6f13706d755daf809d625.so"
+Using #calc - line 29 in file "system/controlDict/functions/forceCoeffs1"
+
+Processor 0
+    Number of cells = 3470
+    Number of points = 7334
+    Number of faces shared with processor 1 = 38
+    Number of faces shared with processor 3 = 71
+    Number of faces shared with processor 4 = 5
+    Number of processor patches = 3
+    Number of processor faces = 114
+    Number of boundary faces = 7122
+Using #calc - line 29 in file "system/controlDict/functions/forceCoeffs1"
+Using #codeStream with "/home/magnus/OpenFOAM/magnus-v2412/run/assignment_5/runs/313_pimple_run/dynamicCode/platforms/linux64GccDPInt32Opt/lib/libcodeStream_3f32376cd607aaf007d6f13706d755daf809d625.so"
+Using #calc - line 29 in file "system/controlDict/functions/forceCoeffs1"
+
+Processor 1
+    Number of cells = 3470
+    Number of points = 7256
+    Number of faces shared with processor 0 = 38
+    Number of faces shared with processor 2 = 55
+    Number of faces shared with processor 4 = 64
+    Number of processor patches = 3
+    Number of processor faces = 157
+    Number of boundary faces = 7063
+Using #calc - line 29 in file "system/controlDict/functions/forceCoeffs1"
+Using #codeStream with "/home/magnus/OpenFOAM/magnus-v2412/run/assignment_5/runs/313_pimple_run/dynamicCode/platforms/linux64GccDPInt32Opt/lib/libcodeStream_3f32376cd607aaf007d6f13706d755daf809d625.so"
+Using #calc - line 29 in file "system/controlDict/functions/forceCoeffs1"
+
+Processor 2
+    Number of cells = 3471
+    Number of points = 7218
+    Number of faces shared with processor 1 = 55
+    Number of faces shared with processor 4 = 1
+    Number of faces shared with processor 5 = 82
+    Number of processor patches = 3
+    Number of processor faces = 138
+    Number of boundary faces = 7025
+Using #calc - line 29 in file "system/controlDict/functions/forceCoeffs1"
+Using #codeStream with "/home/magnus/OpenFOAM/magnus-v2412/run/assignment_5/runs/313_pimple_run/dynamicCode/platforms/linux64GccDPInt32Opt/lib/libcodeStream_3f32376cd607aaf007d6f13706d755daf809d625.so"
+Using #calc - line 29 in file "system/controlDict/functions/forceCoeffs1"
+
+Processor 3
+    Number of cells = 3471
+    Number of points = 7428
+    Number of faces shared with processor 0 = 71
+    Number of faces shared with processor 4 = 77
+    Number of processor patches = 2
+    Number of processor faces = 148
+    Number of boundary faces = 7095
+Using #calc - line 29 in file "system/controlDict/functions/forceCoeffs1"
+Using #codeStream with "/home/magnus/OpenFOAM/magnus-v2412/run/assignment_5/runs/313_pimple_run/dynamicCode/platforms/linux64GccDPInt32Opt/lib/libcodeStream_3f32376cd607aaf007d6f13706d755daf809d625.so"
+Using #calc - line 29 in file "system/controlDict/functions/forceCoeffs1"
+
+Processor 4
+    Number of cells = 3471
+    Number of points = 7264
+    Number of faces shared with processor 0 = 5
+    Number of faces shared with processor 1 = 64
+    Number of faces shared with processor 2 = 1
+    Number of faces shared with processor 3 = 77
+    Number of faces shared with processor 5 = 71
+    Number of processor patches = 5
+    Number of processor faces = 218
+    Number of boundary faces = 6964
+Using #calc - line 29 in file "system/controlDict/functions/forceCoeffs1"
+Using #codeStream with "/home/magnus/OpenFOAM/magnus-v2412/run/assignment_5/runs/313_pimple_run/dynamicCode/platforms/linux64GccDPInt32Opt/lib/libcodeStream_3f32376cd607aaf007d6f13706d755daf809d625.so"
+Using #calc - line 29 in file "system/controlDict/functions/forceCoeffs1"
+
+Processor 5
+    Number of cells = 3472
+    Number of points = 7242
+    Number of faces shared with processor 2 = 82
+    Number of faces shared with processor 4 = 71
+    Number of processor patches = 2
+    Number of processor faces = 153
+    Number of boundary faces = 6975
+
+Number of processor faces = 464
+Max number of cells = 3472 (0.0336134% above average 3470.83)
+Max number of processor patches = 5 (66.6667% above average 3)
+Max number of faces between processors = 218 (40.9483% above average 154.667)
+
+Time = 0
+
+Processor 0: field transfer
+Using #calc - line 29 in file "system/controlDict/functions/forceCoeffs1"
+Using #codeStream with "/home/magnus/OpenFOAM/magnus-v2412/run/assignment_5/runs/313_pimple_run/dynamicCode/platforms/linux64GccDPInt32Opt/lib/libcodeStream_3f32376cd607aaf007d6f13706d755daf809d625.so"
+Using #calc - line 29 in file "system/controlDict/functions/forceCoeffs1"
+Processor 1: field transfer
+Using #calc - line 29 in file "system/controlDict/functions/forceCoeffs1"
+Using #codeStream with "/home/magnus/OpenFOAM/magnus-v2412/run/assignment_5/runs/313_pimple_run/dynamicCode/platforms/linux64GccDPInt32Opt/lib/libcodeStream_3f32376cd607aaf007d6f13706d755daf809d625.so"
+Using #calc - line 29 in file "system/controlDict/functions/forceCoeffs1"
+Processor 2: field transfer
+Using #calc - line 29 in file "system/controlDict/functions/forceCoeffs1"
+Using #codeStream with "/home/magnus/OpenFOAM/magnus-v2412/run/assignment_5/runs/313_pimple_run/dynamicCode/platforms/linux64GccDPInt32Opt/lib/libcodeStream_3f32376cd607aaf007d6f13706d755daf809d625.so"
+Using #calc - line 29 in file "system/controlDict/functions/forceCoeffs1"
+Processor 3: field transfer
+Using #calc - line 29 in file "system/controlDict/functions/forceCoeffs1"
+Using #codeStream with "/home/magnus/OpenFOAM/magnus-v2412/run/assignment_5/runs/313_pimple_run/dynamicCode/platforms/linux64GccDPInt32Opt/lib/libcodeStream_3f32376cd607aaf007d6f13706d755daf809d625.so"
+Using #calc - line 29 in file "system/controlDict/functions/forceCoeffs1"
+Processor 4: field transfer
+Using #calc - line 29 in file "system/controlDict/functions/forceCoeffs1"
+Using #codeStream with "/home/magnus/OpenFOAM/magnus-v2412/run/assignment_5/runs/313_pimple_run/dynamicCode/platforms/linux64GccDPInt32Opt/lib/libcodeStream_3f32376cd607aaf007d6f13706d755daf809d625.so"
+Using #calc - line 29 in file "system/controlDict/functions/forceCoeffs1"
+Processor 5: field transfer
+Using #calc - line 29 in file "system/controlDict/functions/forceCoeffs1"
+Using #codeStream with "/home/magnus/OpenFOAM/magnus-v2412/run/assignment_5/runs/313_pimple_run/dynamicCode/platforms/linux64GccDPInt32Opt/lib/libcodeStream_3f32376cd607aaf007d6f13706d755daf809d625.so"
+Using #calc - line 29 in file "system/controlDict/functions/forceCoeffs1"
+
+End
+

@@ -1,0 +1,76 @@
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2412                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : _b8cf4d35-20260127 OPENFOAM=2412 patch=260127 version=2412
+Arch   : "LSB;label=32;scalar=64"
+Exec   : potentialFoam -parallel -decomposeParDict system/decomposeParDict.6 -pName pPotential -writephi
+Date   : Sep 29 2026
+Time   : 15:56:04
+Host   : magnus-IdeaPad-5-Pro-16ARH7
+PID    : 920910
+I/O    : uncollated
+Case   : /home/magnus/OpenFOAM/magnus-v2412/run/assignment_5/runs/313_pimple_run
+nProcs : 6
+Hosts  :
+(
+    (magnus-IdeaPad-5-Pro-16ARH7 6)
+)
+Pstream initialized with:
+    floatTransfer      : false
+    maxCommsSize       : 0
+    nProcsSimpleSum    : 0
+    nonBlockingExchange: 0 (tuning: 0)
+    exchange algorithm : 0
+    commsType          : nonBlocking
+    polling iterations : 0
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Using #calc - line 29 in file "system/controlDict/functions/forceCoeffs1"
+Using #codeStream with "/home/magnus/OpenFOAM/magnus-v2412/run/assignment_5/runs/313_pimple_run/dynamicCode/platforms/linux64GccDPInt32Opt/lib/libcodeStream_3f32376cd607aaf007d6f13706d755daf809d625.so"
+Using #calc - line 29 in file "system/controlDict/functions/forceCoeffs1"
+Create mesh for time = 0
+
+
+potentialFlow: Operating solver in PISO mode
+
+Reading velocity field U
+
+Using #calc - line 15 in file "processor0/0/U"
+Using #codeStream with "/home/magnus/OpenFOAM/magnus-v2412/run/assignment_5/runs/313_pimple_run/dynamicCode/platforms/linux64GccDPInt32Opt/lib/libcodeStream_6bba26c0527d8b69860ca79812ba1bccc686bdd4.so"
+Using #calc - line 16 in file "processor0/0/U"
+Using #codeStream with "/home/magnus/OpenFOAM/magnus-v2412/run/assignment_5/runs/313_pimple_run/dynamicCode/platforms/linux64GccDPInt32Opt/lib/libcodeStream_89e88f0b3da435b3d325232cd8269a5affdd2103.so"
+Constructing pressure field pPotential
+
+Constructing velocity potential field Phi
+
+No MRF models present
+
+
+Calculating potential flow
+GAMG:  Solving for Phi, Initial residual = 1, Final residual = 0.00830888, No Iterations 13
+GAMG:  Solving for Phi, Initial residual = 0.011585, Final residual = 9.21069e-05, No Iterations 5
+GAMG:  Solving for Phi, Initial residual = 0.00046154, Final residual = 4.41491e-06, No Iterations 22
+GAMG:  Solving for Phi, Initial residual = 4.7643e-05, Final residual = 4.7388e-07, No Iterations 24
+GAMG:  Solving for Phi, Initial residual = 6.11653e-06, Final residual = 9.19476e-08, No Iterations 22
+GAMG:  Solving for Phi, Initial residual = 9.52124e-07, Final residual = 9.10627e-08, No Iterations 6
+GAMG:  Solving for Phi, Initial residual = 2.10071e-07, Final residual = 9.60861e-08, No Iterations 1
+GAMG:  Solving for Phi, Initial residual = 1.1033e-07, Final residual = 8.26711e-08, No Iterations 1
+GAMG:  Solving for Phi, Initial residual = 8.84241e-08, Final residual = 8.84241e-08, No Iterations 0
+GAMG:  Solving for Phi, Initial residual = 8.84241e-08, Final residual = 8.84241e-08, No Iterations 0
+GAMG:  Solving for Phi, Initial residual = 8.84241e-08, Final residual = 8.84241e-08, No Iterations 0
+Continuity error = 7.71329e-06
+Interpolated velocity error = 0.0010018
+ExecutionTime = 0.04 s  ClockTime = 0 s
+
+End
+
+Finalising parallel run

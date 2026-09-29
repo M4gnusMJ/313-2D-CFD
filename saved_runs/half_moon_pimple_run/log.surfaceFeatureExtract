@@ -1,0 +1,98 @@
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2412                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : _b8cf4d35-20260127 OPENFOAM=2412 patch=260127 version=2412
+Arch   : "LSB;label=32;scalar=64"
+Exec   : surfaceFeatureExtract
+Date   : Sep 29 2026
+Time   : 15:44:00
+Host   : magnus-IdeaPad-5-Pro-16ARH7
+PID    : 914722
+I/O    : uncollated
+Case   : /home/magnus/OpenFOAM/magnus-v2412/run/assignment_5/runs/half_moon_pimple_run
+nProcs : 1
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Using #calc - line 29 in file "system/controlDict/functions/forceCoeffs1"
+Using #codeStream with "/home/magnus/OpenFOAM/magnus-v2412/run/assignment_5/runs/half_moon_pimple_run/dynamicCode/platforms/linux64GccDPInt32Opt/lib/libcodeStream_3f32376cd607aaf007d6f13706d755daf809d625.so"
+Could not load "/home/magnus/OpenFOAM/magnus-v2412/run/assignment_5/runs/half_moon_pimple_run/dynamicCode/platforms/linux64GccDPInt32Opt/lib/libcodeStream_3f32376cd607aaf007d6f13706d755daf809d625.so"
+/home/magnus/OpenFOAM/magnus-v2412/run/assignment_5/runs/half_moon_pimple_run/dynamicCode/platforms/linux64GccDPInt32Opt/lib/libcodeStream_3f32376cd607aaf007d6f13706d755daf809d625.so: cannot open shared object file: No such file or directory
+Creating new library in "dynamicCode/_3f32376cd607aaf007d6f13706d755daf809d625/platforms/linux64GccDPInt32Opt/lib/libcodeStream_3f32376cd607aaf007d6f13706d755daf809d625.so"
+Invoking wmake libso /home/magnus/OpenFOAM/magnus-v2412/run/assignment_5/runs/half_moon_pimple_run/dynamicCode/_3f32376cd607aaf007d6f13706d755daf809d625
+wmake libso /home/magnus/OpenFOAM/magnus-v2412/run/assignment_5/runs/half_moon_pimple_run/dynamicCode/_3f32376cd607aaf007d6f13706d755daf809d625
+    ln: ./lnInclude
+    dep: codeStreamTemplate.C
+    Ctoo: codeStreamTemplate.C
+    link: /home/magnus/OpenFOAM/magnus-v2412/run/assignment_5/runs/half_moon_pimple_run/dynamicCode/_3f32376cd607aaf007d6f13706d755daf809d625/../platforms/linux64GccDPInt32Opt/lib/libcodeStream_3f32376cd607aaf007d6f13706d755daf809d625.so
+Using #calc - line 29 in file "system/controlDict/functions/forceCoeffs1"
+
+Note: Feature line extraction only valid on closed manifold surfaces
+
+Reading surfaceFeatureExtractDict
+
+Surfaces     : body.stl
+Output       : body
+Load options : offset
+Write options: writeObj=yes writeVTK=off
+
+Statistics:
+Triangles    : 136 in 1 region(s)
+Vertices     : 70
+Bounding Box : (0 0 -0.05) (0.547925 1.09585 0.059585)
+
+Constructing feature set from included angle 150
+Selecting edges based purely on geometric tests: no
+Removing all non-manifold edges (edges with > 2 connected faces) unless they cross multiple regions
+
+Initial Feature set:
+    points : 4
+    edges  : 72
+    of which
+        region edges   : 0
+        external edges : 72
+        internal edges : 0
+
+Final Feature set:
+    points : 70
+    of which
+        convex             : 4
+        concave            : 0
+        mixed              : 0
+        non-feature        : 66
+    edges  : 72
+    of which
+        external edges     : 72
+        internal edges     : 0
+        flat edges         : 0
+        open edges         : 0
+        multiply connected : 0
+
+Writing extendedFeatureEdgeMesh to "/home/magnus/OpenFOAM/magnus-v2412/run/assignment_5/runs/half_moon_pimple_run/constant/extendedFeatureEdgeMesh/body.extendedFeatureEdgeMesh"
+
+Writing extendedEdgeMesh components to "/home/magnus/OpenFOAM/magnus-v2412/run/assignment_5/runs/half_moon_pimple_run/constant/extendedFeatureEdgeMesh/body"
+Writing 4 convex feature points to "/home/magnus/OpenFOAM/magnus-v2412/run/assignment_5/runs/half_moon_pimple_run/constant/extendedFeatureEdgeMesh/body_convexFeaturePts.obj"
+Writing 0 concave feature points to "/home/magnus/OpenFOAM/magnus-v2412/run/assignment_5/runs/half_moon_pimple_run/constant/extendedFeatureEdgeMesh/body_concaveFeaturePts.obj"
+Writing 0 mixed feature points to "/home/magnus/OpenFOAM/magnus-v2412/run/assignment_5/runs/half_moon_pimple_run/constant/extendedFeatureEdgeMesh/body_mixedFeaturePts.obj"
+Writing 0 mixed feature point structure to "/home/magnus/OpenFOAM/magnus-v2412/run/assignment_5/runs/half_moon_pimple_run/constant/extendedFeatureEdgeMesh/body_mixedFeaturePtsStructure.obj"
+Writing 72 external edges to "/home/magnus/OpenFOAM/magnus-v2412/run/assignment_5/runs/half_moon_pimple_run/constant/extendedFeatureEdgeMesh/body_externalEdges.obj"
+Writing 0 internal edges to "/home/magnus/OpenFOAM/magnus-v2412/run/assignment_5/runs/half_moon_pimple_run/constant/extendedFeatureEdgeMesh/body_internalEdges.obj"
+Writing 0 flat edges to "/home/magnus/OpenFOAM/magnus-v2412/run/assignment_5/runs/half_moon_pimple_run/constant/extendedFeatureEdgeMesh/body_flatEdges.obj"
+Writing 0 open edges to "/home/magnus/OpenFOAM/magnus-v2412/run/assignment_5/runs/half_moon_pimple_run/constant/extendedFeatureEdgeMesh/body_openEdges.obj"
+Writing 0 multiple edges to "/home/magnus/OpenFOAM/magnus-v2412/run/assignment_5/runs/half_moon_pimple_run/constant/extendedFeatureEdgeMesh/body_multipleEdges.obj"
+Writing 0 region edges to "/home/magnus/OpenFOAM/magnus-v2412/run/assignment_5/runs/half_moon_pimple_run/constant/extendedFeatureEdgeMesh/body_regionEdges.obj"
+Writing 72 edge directions to "/home/magnus/OpenFOAM/magnus-v2412/run/assignment_5/runs/half_moon_pimple_run/constant/extendedFeatureEdgeMesh/body_edgeDirections.obj"
+
+Writing featureEdgeMesh to "/home/magnus/OpenFOAM/magnus-v2412/run/assignment_5/runs/half_moon_pimple_run/constant/triSurface/body.eMesh"
+ExecutionTime = 0.01 s  ClockTime = 2 s
+
+End
+

@@ -85,8 +85,8 @@ forceCoeffsGraph1
     xlabel          "Iteration";
     ylabel          "Coefficient";
 
-    yMin            -1;
-    yMax            1;
+    yMin            -2;
+    yMax            4;
 
     functions
     {
@@ -100,16 +100,6 @@ forceCoeffsGraph1
         //     object      valueAverage1;
         //     entry       CdMean;
         // }
-        Cd(f)
-        {
-            object      forceCoeffs1;
-            entry       Cd(f);
-        }
-        Cd(r)
-        {
-            object      forceCoeffs1;
-            entry       Cd(r);
-        }
         Cl
         {
             object      forceCoeffs1;
@@ -121,20 +111,6 @@ forceCoeffsGraph1
         //     object      valueAverage1;
         //     entry       ClMean;
         // }
-        Cl(f)
-        {
-            object      forceCoeffs1;
-            entry       Cl(f);
-            //colour      (0, 0, 0);
-            title       Cl(f);
-        }
-        Cl(r)
-        {
-            object      forceCoeffs1;
-            entry       Cl(r);
-            //colour      (0, 0, 0);
-            title       Cl(r);
-        }
     }
 }
 

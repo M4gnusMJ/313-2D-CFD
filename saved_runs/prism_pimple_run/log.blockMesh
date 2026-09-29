@@ -1,0 +1,135 @@
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2412                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : _b8cf4d35-20260127 OPENFOAM=2412 patch=260127 version=2412
+Arch   : "LSB;label=32;scalar=64"
+Exec   : blockMesh
+Date   : Sep 29 2026
+Time   : 15:25:51
+Host   : magnus-IdeaPad-5-Pro-16ARH7
+PID    : 911405
+I/O    : uncollated
+Case   : /home/magnus/OpenFOAM/magnus-v2412/run/assignment_5/runs/prism_pimple_run
+nProcs : 1
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Using #calc - line 29 in file "system/controlDict/functions/forceCoeffs1"
+Using #codeStream with "/home/magnus/OpenFOAM/magnus-v2412/run/assignment_5/runs/prism_pimple_run/dynamicCode/platforms/linux64GccDPInt32Opt/lib/libcodeStream_3f32376cd607aaf007d6f13706d755daf809d625.so"
+Using #calc - line 29 in file "system/controlDict/functions/forceCoeffs1"
+Creating block mesh from "system/blockMeshDict"
+Using #calc - line 19 in file "system/blockMeshDict"
+Using #codeStream with "/home/magnus/OpenFOAM/magnus-v2412/run/assignment_5/runs/prism_pimple_run/dynamicCode/platforms/linux64GccDPInt32Opt/lib/libcodeStream_b4b0f7eb7e811286b1691f95383572c73d114fb2.so"
+Could not load "/home/magnus/OpenFOAM/magnus-v2412/run/assignment_5/runs/prism_pimple_run/dynamicCode/platforms/linux64GccDPInt32Opt/lib/libcodeStream_b4b0f7eb7e811286b1691f95383572c73d114fb2.so"
+/home/magnus/OpenFOAM/magnus-v2412/run/assignment_5/runs/prism_pimple_run/dynamicCode/platforms/linux64GccDPInt32Opt/lib/libcodeStream_b4b0f7eb7e811286b1691f95383572c73d114fb2.so: cannot open shared object file: No such file or directory
+Creating new library in "dynamicCode/_b4b0f7eb7e811286b1691f95383572c73d114fb2/platforms/linux64GccDPInt32Opt/lib/libcodeStream_b4b0f7eb7e811286b1691f95383572c73d114fb2.so"
+Invoking wmake libso /home/magnus/OpenFOAM/magnus-v2412/run/assignment_5/runs/prism_pimple_run/dynamicCode/_b4b0f7eb7e811286b1691f95383572c73d114fb2
+wmake libso /home/magnus/OpenFOAM/magnus-v2412/run/assignment_5/runs/prism_pimple_run/dynamicCode/_b4b0f7eb7e811286b1691f95383572c73d114fb2
+    ln: ./lnInclude
+    dep: codeStreamTemplate.C
+    Ctoo: codeStreamTemplate.C
+    link: /home/magnus/OpenFOAM/magnus-v2412/run/assignment_5/runs/prism_pimple_run/dynamicCode/_b4b0f7eb7e811286b1691f95383572c73d114fb2/../platforms/linux64GccDPInt32Opt/lib/libcodeStream_b4b0f7eb7e811286b1691f95383572c73d114fb2.so
+Using #calc - line 20 in file "system/blockMeshDict"
+Using #codeStream with "/home/magnus/OpenFOAM/magnus-v2412/run/assignment_5/runs/prism_pimple_run/dynamicCode/platforms/linux64GccDPInt32Opt/lib/libcodeStream_d828ba4a3ef38c8e2da544fd5161fd1aa6f275f3.so"
+Could not load "/home/magnus/OpenFOAM/magnus-v2412/run/assignment_5/runs/prism_pimple_run/dynamicCode/platforms/linux64GccDPInt32Opt/lib/libcodeStream_d828ba4a3ef38c8e2da544fd5161fd1aa6f275f3.so"
+/home/magnus/OpenFOAM/magnus-v2412/run/assignment_5/runs/prism_pimple_run/dynamicCode/platforms/linux64GccDPInt32Opt/lib/libcodeStream_d828ba4a3ef38c8e2da544fd5161fd1aa6f275f3.so: cannot open shared object file: No such file or directory
+Creating new library in "dynamicCode/_d828ba4a3ef38c8e2da544fd5161fd1aa6f275f3/platforms/linux64GccDPInt32Opt/lib/libcodeStream_d828ba4a3ef38c8e2da544fd5161fd1aa6f275f3.so"
+Invoking wmake libso /home/magnus/OpenFOAM/magnus-v2412/run/assignment_5/runs/prism_pimple_run/dynamicCode/_d828ba4a3ef38c8e2da544fd5161fd1aa6f275f3
+wmake libso /home/magnus/OpenFOAM/magnus-v2412/run/assignment_5/runs/prism_pimple_run/dynamicCode/_d828ba4a3ef38c8e2da544fd5161fd1aa6f275f3
+    ln: ./lnInclude
+    dep: codeStreamTemplate.C
+    Ctoo: codeStreamTemplate.C
+    link: /home/magnus/OpenFOAM/magnus-v2412/run/assignment_5/runs/prism_pimple_run/dynamicCode/_d828ba4a3ef38c8e2da544fd5161fd1aa6f275f3/../platforms/linux64GccDPInt32Opt/lib/libcodeStream_d828ba4a3ef38c8e2da544fd5161fd1aa6f275f3.so
+Using #calc - line 21 in file "system/blockMeshDict"
+Using #codeStream with "/home/magnus/OpenFOAM/magnus-v2412/run/assignment_5/runs/prism_pimple_run/dynamicCode/platforms/linux64GccDPInt32Opt/lib/libcodeStream_594bb7e3cbb666415b5f139baeab3c12838354d5.so"
+Could not load "/home/magnus/OpenFOAM/magnus-v2412/run/assignment_5/runs/prism_pimple_run/dynamicCode/platforms/linux64GccDPInt32Opt/lib/libcodeStream_594bb7e3cbb666415b5f139baeab3c12838354d5.so"
+/home/magnus/OpenFOAM/magnus-v2412/run/assignment_5/runs/prism_pimple_run/dynamicCode/platforms/linux64GccDPInt32Opt/lib/libcodeStream_594bb7e3cbb666415b5f139baeab3c12838354d5.so: cannot open shared object file: No such file or directory
+Creating new library in "dynamicCode/_594bb7e3cbb666415b5f139baeab3c12838354d5/platforms/linux64GccDPInt32Opt/lib/libcodeStream_594bb7e3cbb666415b5f139baeab3c12838354d5.so"
+Invoking wmake libso /home/magnus/OpenFOAM/magnus-v2412/run/assignment_5/runs/prism_pimple_run/dynamicCode/_594bb7e3cbb666415b5f139baeab3c12838354d5
+wmake libso /home/magnus/OpenFOAM/magnus-v2412/run/assignment_5/runs/prism_pimple_run/dynamicCode/_594bb7e3cbb666415b5f139baeab3c12838354d5
+    ln: ./lnInclude
+    dep: codeStreamTemplate.C
+    Ctoo: codeStreamTemplate.C
+    link: /home/magnus/OpenFOAM/magnus-v2412/run/assignment_5/runs/prism_pimple_run/dynamicCode/_594bb7e3cbb666415b5f139baeab3c12838354d5/../platforms/linux64GccDPInt32Opt/lib/libcodeStream_594bb7e3cbb666415b5f139baeab3c12838354d5.so
+Using #calc - line 39 in file "system/blockMeshDict"
+Using #codeStream with "/home/magnus/OpenFOAM/magnus-v2412/run/assignment_5/runs/prism_pimple_run/dynamicCode/platforms/linux64GccDPInt32Opt/lib/libcodeStream_91cb55ac1c60deb6f37d408566ea5d57ad1461d4.so"
+Could not load "/home/magnus/OpenFOAM/magnus-v2412/run/assignment_5/runs/prism_pimple_run/dynamicCode/platforms/linux64GccDPInt32Opt/lib/libcodeStream_91cb55ac1c60deb6f37d408566ea5d57ad1461d4.so"
+/home/magnus/OpenFOAM/magnus-v2412/run/assignment_5/runs/prism_pimple_run/dynamicCode/platforms/linux64GccDPInt32Opt/lib/libcodeStream_91cb55ac1c60deb6f37d408566ea5d57ad1461d4.so: cannot open shared object file: No such file or directory
+Creating new library in "dynamicCode/_91cb55ac1c60deb6f37d408566ea5d57ad1461d4/platforms/linux64GccDPInt32Opt/lib/libcodeStream_91cb55ac1c60deb6f37d408566ea5d57ad1461d4.so"
+Invoking wmake libso /home/magnus/OpenFOAM/magnus-v2412/run/assignment_5/runs/prism_pimple_run/dynamicCode/_91cb55ac1c60deb6f37d408566ea5d57ad1461d4
+wmake libso /home/magnus/OpenFOAM/magnus-v2412/run/assignment_5/runs/prism_pimple_run/dynamicCode/_91cb55ac1c60deb6f37d408566ea5d57ad1461d4
+    ln: ./lnInclude
+    dep: codeStreamTemplate.C
+    Ctoo: codeStreamTemplate.C
+    link: /home/magnus/OpenFOAM/magnus-v2412/run/assignment_5/runs/prism_pimple_run/dynamicCode/_91cb55ac1c60deb6f37d408566ea5d57ad1461d4/../platforms/linux64GccDPInt32Opt/lib/libcodeStream_91cb55ac1c60deb6f37d408566ea5d57ad1461d4.so
+Using #calc - line 40 in file "system/blockMeshDict"
+Using #codeStream with "/home/magnus/OpenFOAM/magnus-v2412/run/assignment_5/runs/prism_pimple_run/dynamicCode/platforms/linux64GccDPInt32Opt/lib/libcodeStream_40fc67a767c124bea368b32ee5f6ecb6e00310af.so"
+Could not load "/home/magnus/OpenFOAM/magnus-v2412/run/assignment_5/runs/prism_pimple_run/dynamicCode/platforms/linux64GccDPInt32Opt/lib/libcodeStream_40fc67a767c124bea368b32ee5f6ecb6e00310af.so"
+/home/magnus/OpenFOAM/magnus-v2412/run/assignment_5/runs/prism_pimple_run/dynamicCode/platforms/linux64GccDPInt32Opt/lib/libcodeStream_40fc67a767c124bea368b32ee5f6ecb6e00310af.so: cannot open shared object file: No such file or directory
+Creating new library in "dynamicCode/_40fc67a767c124bea368b32ee5f6ecb6e00310af/platforms/linux64GccDPInt32Opt/lib/libcodeStream_40fc67a767c124bea368b32ee5f6ecb6e00310af.so"
+Invoking wmake libso /home/magnus/OpenFOAM/magnus-v2412/run/assignment_5/runs/prism_pimple_run/dynamicCode/_40fc67a767c124bea368b32ee5f6ecb6e00310af
+wmake libso /home/magnus/OpenFOAM/magnus-v2412/run/assignment_5/runs/prism_pimple_run/dynamicCode/_40fc67a767c124bea368b32ee5f6ecb6e00310af
+    ln: ./lnInclude
+    dep: codeStreamTemplate.C
+    Ctoo: codeStreamTemplate.C
+    link: /home/magnus/OpenFOAM/magnus-v2412/run/assignment_5/runs/prism_pimple_run/dynamicCode/_40fc67a767c124bea368b32ee5f6ecb6e00310af/../platforms/linux64GccDPInt32Opt/lib/libcodeStream_40fc67a767c124bea368b32ee5f6ecb6e00310af.so
+Creating block edges
+No non-planar block faces defined
+Creating topology blocks
+
+Creating topology patches - from boundary section
+
+Creating block mesh topology
+
+Check topology
+
+	Basic statistics
+		Number of internal faces : 0
+		Number of boundary faces : 6
+		Number of defined boundary faces : 6
+		Number of undefined boundary faces : 0
+	Checking patch -> block consistency
+
+Creating block offsets
+Creating merge list (topological search)...
+
+Creating polyMesh from blockMesh
+Creating patches
+Creating cells
+Creating points with scale (1 1 1)
+    Block 0 cell size :
+        i : 0.487044 .. 0.487044
+        j : 0.473444 .. 0.473444
+        k : 0.04 .. 0.04
+
+No patch pairs to merge
+
+Writing polyMesh with 0 cellZones
+----------------
+Mesh Information
+----------------
+  boundingBox: (-5.47925 -1 0) (12.0543 6.5751 0.04)
+  nPoints: 1258
+  nCells: 576
+  nFaces: 2356
+  nInternalFaces: 1100
+----------------
+Patches
+----------------
+  patch 0 (start: 1100 size: 576) name: front
+  patch 1 (start: 1676 size: 576) name: back
+  patch 2 (start: 2252 size: 16) name: inlet
+  patch 3 (start: 2268 size: 16) name: outlet
+  patch 4 (start: 2284 size: 36) name: lowerWall
+  patch 5 (start: 2320 size: 36) name: upperWall
+
+End
+
