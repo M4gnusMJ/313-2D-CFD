@@ -1,0 +1,36 @@
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      fvSolution;
+}
+
+#include "fvSolution.steady"
+
+solvers
+{
+    pFinal
+    {
+        ${../../solvers/p};
+        relTol          0;
+    }
+
+    "(U|k|omega)Final"
+    {
+        ${../../solvers/U};
+        relTol          0;
+    }
+}
+
+PIMPLE
+{
+    nOuterCorrectors 2;
+    nCorrectors     2;
+    nNonOrthogonalCorrectors ${../SIMPLE/nNonOrthogonalCorrectors};
+
+    pRefCell        ${../SIMPLE/pRefCell};
+    pRefValue       ${../SIMPLE/pRefValue};
+}
+
+#remove SIMPLE

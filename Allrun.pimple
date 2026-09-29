@@ -1,0 +1,29 @@
+#!/bin/sh
+cd "${0%/*}" || exit                                # Run from this directory
+#------------------------------------------------------------------------------
+
+if [ "$#" -eq 0 ]
+then
+    set -- prism half_moon 313
+fi
+
+for caseName in "$@"
+do
+    runDir="runs/${caseName}_pimple_run"
+
+    # Copy the common inputs and selected geometry
+    mkdir -p "$runDir/constant/triSurface" || exit
+    cp -r base_setup/. "$runDir/" || exit
+    cp "geometries/$caseName/body.stl" "$runDir/constant/triSurface/body.stl" || exit
+
+    # Keep the shared dictionaries available to the transient overrides
+    for dict in controlDict fvSchemes fvSolution
+    do
+        cp "$runDir/system/$dict" "$runDir/system/$dict.steady" || exit
+        cp "$runDir/system/transient/$dict" "$runDir/system/$dict" || exit
+    done
+
+    "$runDir/Allrun.pimple" || exit
+done
+
+#------------------------------------------------------------------------------

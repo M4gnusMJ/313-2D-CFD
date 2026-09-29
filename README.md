@@ -102,3 +102,21 @@ a generated case uses its existing copied settings.
 
 To clean all generated cases, run `./Allclean` from the project root. This
 deletes `runs/`, including all results, and preserves `base_setup/` and `geometries/`.
+
+## Transient runs
+
+Run `./Allrun.pimple prism` for one case, or `./Allrun.pimple` for all cases.
+These use `pimpleFoam` and separate folders such as `runs/prism_pimple_run/`.
+An already prepared transient case can run with `./runs/prism_pimple_run/Allrun.pimple`.
+
+The transient dictionaries in `base_setup/system/transient/` override the
+shared settings: `backward` time discretisation, two PIMPLE outer correctors,
+and adaptive time stepping with `maxCo 0.5`. The initial time step is
+`0.0001 s`, capped at `0.005 s`; the first trial runs for `1 s`, writing
+fields every `0.1 s` and force coefficients every time step. Small mesh cells
+can require much smaller time steps. Extend the duration before calculating
+time-averaged coefficients once the initial transient has passed.
+
+The mesh, boundary conditions, turbulence model, and force references are shared
+with the steady runs. The transient runner omits the unused tutorial `topoSet`
+step and report, and calculates `yPlus` at the latest saved time.
