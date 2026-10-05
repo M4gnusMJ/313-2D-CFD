@@ -1,13 +1,7 @@
-# Final handoff
+# Current handoff
 
-The 313 study execution and reporting are complete. All thirteen variants reached 1 s, with solver End and full fixed-window data coverage. All thirteen have separate archives; twelve passed mesh quality, one is preserved as a failed archive. Ten provide two-cycle means; longer outlet and lower roof lack two cycles and are explicitly fixed-window fallbacks. No runs or monitors remain active.
+2026-10-05 original313 transientSA maxCo1 COMPLETE. Driverstudy/run_313_sa_pimple.py; outputs runs/313_sa_pimple/result.json,result.md,313_sa_pimple.tar.gz. Runner50732exit0,actualSA/1sEnd/allstageEnd/MeshOK20825originalcells/bounds/all6finalnuTilda independentlyverified. Exactoriginalmesh/STL/domain/flow,SAfields sameprevioussteady; fresh0..1s,pimpleFoam/backward/PIMPLE2/2/2,maxCo1,maxDeltaT.005. Clock743s.
 
-Authoritative delivery: runs/313_study/results/README.md, comparison.md, comparison.csv, individual JSON/Markdown reports, and runs/313_study/archives/*.tar.gz. Main manifest consolidated after all runners finished. Complete independent evidence is in .orchestrator/FINAL_AUDIT.md and VERIFICATION.md.
+Cd last2cycles2.1015741181,bounds.5823205687/.7751850947/.9642336730,percycle2.0708289851/2.1329398419. Fixed.5–1Cd2.0790043567. About3%cyclevariation; no strictstationarity claim. SSTbaselinecomparison-2.80843%cycle/-2.47505%fixed alsochangesmaxCo.5to1. IndependentNumPymeans agree<1e-10; archiveSHA/logs/finalfields verified.
 
-Shorter inlet failed one checkMesh skewness check (one face, max8.4413), excluded from accepted comparisons. Raw means are retained only in upstream_dist_minus_1L.rejected_diagnostic.json with accepted=false. Initial incorrect domain setups were quarantined under invalid_domain_setup and excluded. Corrected domain preparation preserves #calc/substitutions; accepted domain bounds independently checked.
-
-Refinement box/levels stayed unchanged; mesh sensitivity remains out of scope. Five numerical variants warm-started at0.3; domain and turbulence cases started0. End1 and agreed averaging protocol preserved. Baseline cycle variation5.274% and half-window drift7.213% limit stationarity claims. Some runs concurrent, so wall times are not controlled benchmarks.
-
-Runner60766 terminalexit1 reflects the single mesh failure; all six domain solvers reached1. Domainmonitor93065 exited0. Originalrunner70140 terminalexit1 from historical launch failures; all numerical variants verified. I runner49378/monitor80999 exited0. Other historical sessions finished. Do not restart completed cases.
-
-User notebook average_cd.ipynb and coefficient-313.dat preserved; saved baseline and shared base_setup unchanged. Generated output ignored by Git. No commit requested or made.
+All priorstudies/userplot preserved; no active simulations orremaining tasks. EvidenceVERIFICATION.md. No commit made.

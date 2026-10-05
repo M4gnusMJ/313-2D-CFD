@@ -102,3 +102,37 @@ python3 -u study/monitor_study.py
 It does not start or restart simulations, and exits when all case statuses
 are terminal. Simulation liveness must still be checked against the runner
 process/session rather than inferred from the manifest.
+
+## Prism lower symmetry check
+
+`python3 study/run_prism_symmetry.py` runs a fresh prism case in
+`runs/prism_symmetry_check/case`, preserving the latest combined prism settings
+except for the lower boundary. It moves lowerWall to Y = -8.7668 m, giving
+the same 8.7668 m clearance from the prism as the roof at Y = 9.86265 m,
+and sets its mesh and field conditions to symmetryPlane. Background cell
+counts follow the unchanged max_h = 0.5 m target; refinement settings stay
+unchanged. Use `--prepare-only` to prepare inputs without running.
+
+The six-rank transient run covers 0–1 s. Results in `result.json` and
+`result.md` compare time-weighted Cd over the last two complete lift cycles
+and 0.5–1 s with the latest combined prism and saved original prism runs.
+The case is archived separately as `prism_symmetry.tar.gz` when accepted,
+or `prism_symmetry.failed.tar.gz` if verification fails. Existing executions
+are preserved rather than overwritten.
+
+## Original 313 steady Spalart–Allmaras
+
+`python3 study/run_313_sa_steady.py` reuses the exact saved original 313 mesh
+and runs `simpleFoam` with Spalart–Allmaras for the original 500 SIMPLE
+iterations. Results and a separate case archive go to `runs/313_sa_steady/`.
+The report includes final Cd, the last 100 iteration mean/range, and residuals;
+reaching 500 iterations does not by itself establish convergence.
+
+## Original 313 transient Spalart–Allmaras
+
+`python3 study/run_313_sa_pimple.py` reuses the original saved 313 mesh,
+starts afresh at 0, and runs Spalart–Allmaras with `pimpleFoam` to 1 s at
+`maxCo = 1`. Existing PIMPLE, backward time scheme, physical inputs and
+boundary conditions are retained. Results and archive are written under
+`runs/313_sa_pimple/`. The report gives time-weighted Cd for the last two
+complete lift cycles and 0.5–1 s, with cycle bounds and individual means.
