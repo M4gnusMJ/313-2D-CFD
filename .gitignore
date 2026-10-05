@@ -23,3 +23,6 @@ motorBike/*.OpenFOAM
 *.swo
 .DS_Store
 Thumbs.db
+
+# Python script caches
+__pycache__/
